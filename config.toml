@@ -1,0 +1,6 @@
+[spotipy]
+scope = ['user-library-read','playlist-read-private','playlist-modify-private','playlist-modify-public','user-read-currently-playing','user-read-recently-played','user-modify-playback-state','user-read-playback-state','app-remote-control']
+show_dialog = false
+client_id = ""
+client_secret = ""
+redirect_uri = "URL to your application"
