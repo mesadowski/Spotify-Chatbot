@@ -6,6 +6,18 @@ It turns out that using an LLM to control something in the real world is quite d
 
 So, for example, if the user is trying to brainstorm a list of songs, and use it to create a Spotify playlist, then OpenAI should help us take that list of songs and feed it to the Spotify API that creates a playlist. Or if the user wants to start playing a certain album, the LLM should help us call the Spotify API to play the album by giving us the exact API call to make, and the specific parameters to use (e.g., album name, artist). Then our software can do the rest, by making the appropriate the API call.
 
+# Current Functionality
+The chatbot includes the following functionality:
+- Have a conversation about music that (hopefully) results in some suggested tracks. The user can then ask the bot to add the tracks to their Spotify queue or a playlist.
+- List your playlists
+- Create a new playlist based on some tracks, or add tracks to an existing playlist
+- List the tracks within a playlist, or on an album
+- Add tracks to the queue
+- Start to play a specific album, song, or playlist
+- List the top tracks for an artist (according to Spotify)
+- Pause play
+- Start playing again
+
 # How it Works
 
 Streamlit provides a basic framework for a web chatbot. Once the user types their prompt into the chatbot, we send it to OpenAI's API. However, a key thing we do in our API call to OpenAI is to utilize OpenAI's "tools" capabilities. Our tools.py file explains to OpenAI all of the API functions we want it to consider when responding to the user's prompt. This biases OpenAI towards providing us with an API call, rather than just some text. If OpenAI responds with a "tools" call we run some code that helps us call the corresponding Spotify API call, interpret the result and display it to the user in the chatbot. So, for example, if the user is conversing with the chatbot about Bowie's top songs, the user might ask the bot to create a playlist using those tracks. OpenAI will realize that we should use the Spotify API call to create a new playlist, and feed those Bowie tracks as paramters. Then, Spotify will create the new playlist.
