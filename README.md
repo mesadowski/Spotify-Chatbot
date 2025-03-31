@@ -1,16 +1,17 @@
 # Spotify-Chatbot - A chatbot that controls Spotify
  
-Intro
 Most of us have tried out ChatGPT or other Large Language Models (LLMs). They have an amazing ability to generate text based on a user's prompt. But can we use LLMs to actually control a real world "thing?" Or are they really just useful for generating text?
 
 It turns out that using an LLM to control something in the real world is quite doable now. Using OpenAI's tools functions, we can give an LLM like OpenAI enough knowledge to let it choose an external API to call, based on the situation. We "force" OpenAI to select an API call, rather than just blather on using unstructured text, like it ordinarily does. The API could be used control another sofware application, or it could even control a physical object like a robot.
 
 So, for example, if the user is trying to brainstorm a list of songs, and use it to create a Spotify playlist, then OpenAI should help us take that list of songs and feed it to the Spotify API that creates a playlist. Or if the user wants to start playing a certain album, the LLM should help us call the Spotify API to play the album by giving us the exact API call to make, and the specific parameters to use (e.g., album name, artist). Then our software can do the rest, by making the appropriate the API call.
 
-How it Works
+#How it Works
+
 Streamlit provides a basic framework for a web chatbot. Once the user types their prompt into the chatbot, we send it to OpenAI's API. However, a key thing we do in our API call to OpenAI is to utilize OpenAI's "tools" capabilities. Our tools.py file explains to OpenAI all of the API functions we want it to consider when responding to the user's prompt. This biases OpenAI towards providing us with an API call, rather than just some text. If OpenAI responds with a "tools" call we run some code that helps us call the corresponding Spotify API call, interpret the result and display it to the user in the chatbot. So, for example, if the user is conversing with the chatbot about Bowie's top songs, the user might ask the bot to create a playlist using those tracks. OpenAI will realize that we should use the Spotify API call to create a new playlist, and feed those Bowie tracks as paramters. Then, Spotify will create the new playlist.
 
-Steps to Set Up the Chatbot
+#Steps to Set Up the Chatbot
+
 You'll want to modify the code to your preferences. But to get started, follow these steps:
 
 1. Create an "App" in the Spotify Console
