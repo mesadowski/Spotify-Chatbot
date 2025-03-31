@@ -15,7 +15,7 @@ Streamlit provides a basic framework for a web chatbot. Once the user types thei
 You'll want to modify the code to your preferences. But to get started, follow these steps:
 
 # 1. Create an "App" in the Spotify Console
-To get started, create a Spotify App in the Spotify Developer Console. You can see how to so that here. You'll get a couple of important items that you'll need later: your Spotify Client ID and your Spotify Client Secret.
+To get started, create a Spotify App in the Spotify Developer Console. You can see how to so that on their web site. You'll get a couple of important items that you'll need later: your Spotify Client ID and your Spotify Client Secret.
 
 # 2. Get an OpenAI API Key
 Open AI is the company behind ChatGPT. You can integrate their technology into you projects with their API. Create an OpenAI developer account using their API console and get an API key. You'll need to provide your credit card and put down some money, but the costs for LLM services have been dropping like a rock lately. So just put down a few dollars. We'll use their 4o-mini model, which is a great value. It's much less expensive than their prior models, and seems to work very well for applications like ours. And it's pretty fast.
