@@ -1,5 +1,4 @@
-# Spotify-Chatbot
- Chatbot that controls Spotify
+# Spotify-Chatbot - A chatbot that controls Spotify
  
 Intro
 Most of us have tried out ChatGPT or other Large Language Models (LLMs). They have an amazing ability to generate text based on a user's prompt. But can we use LLMs to actually control a real world "thing?" Or are they really just useful for generating text?
