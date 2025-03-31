@@ -10,7 +10,7 @@ So, for example, if the user is trying to brainstorm a list of songs, and use it
 
 Streamlit provides a basic framework for a web chatbot. Once the user types their prompt into the chatbot, we send it to OpenAI's API. However, a key thing we do in our API call to OpenAI is to utilize OpenAI's "tools" capabilities. Our tools.py file explains to OpenAI all of the API functions we want it to consider when responding to the user's prompt. This biases OpenAI towards providing us with an API call, rather than just some text. If OpenAI responds with a "tools" call we run some code that helps us call the corresponding Spotify API call, interpret the result and display it to the user in the chatbot. So, for example, if the user is conversing with the chatbot about Bowie's top songs, the user might ask the bot to create a playlist using those tracks. OpenAI will realize that we should use the Spotify API call to create a new playlist, and feed those Bowie tracks as paramters. Then, Spotify will create the new playlist.
 
-#Steps to Set Up the Chatbot
+# Steps to Set Up the Chatbot
 
 You'll want to modify the code to your preferences. But to get started, follow these steps:
 
